@@ -1,0 +1,63 @@
+.s2 { gap: 10px; padding-bottom: 10px; }
+.s2-pick { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
+.s2-pick select { width: 250px; font-family: var(--font); font-size: 13px; }
+.s2-done { font-size: 13px; white-space: nowrap; }
+.s2-done b { color: var(--text); }
+.s2-bar { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; justify-content: space-between; }
+.s2-tabs { flex-wrap: wrap; }
+.s2-tabs button, .s2-tools .seg button { height: 28px; line-height: 28px; }
+.s2-tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.s2-tools .seg button { min-width: 18px; text-align: center; }
+
+.s2-main { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+.s2-main.with-panel { grid-template-columns: minmax(0, 1fr) 356px; }
+.s2-center { min-width: 0; min-height: 0; display: flex; flex-direction: column; gap: 6px; }
+.s2-side { min-height: 0; min-width: 0; }
+.s2-canvas { position: relative; flex: 1; min-height: 0; border: 1px solid var(--line); border-radius: var(--r); background: #0d151e; overflow: hidden; cursor: grab; touch-action: none; user-select: none; }
+.s2-canvas:active { cursor: grabbing; }
+.s2-svg { display: block; width: 100%; height: 100%; --vc: var(--nodata); }
+.s2-svg.live { --vc: #e7eef6; }
+.s2-svg.paper { background: #fff; }
+.s2-net.click, .s2-el.click { cursor: pointer; }
+.s2-net.hov .s2-wire, .s2-net.hov .s2-netsym { stroke-width: 2.8; }
+.s2-net.sel .s2-wire, .s2-net.sel .s2-netsym { stroke-width: 3.4; filter: drop-shadow(0 0 3px var(--nc)); }
+.s2-net.sel .s2-tagname, .s2-net.hov .s2-tagname { text-decoration: underline; }
+.s2-el.click:hover .s2-sym, .s2-el.click:hover .s2-body, .s2-el.click:hover .s2-block { stroke: var(--accent); }
+.s2-el.sel .s2-sym, .s2-el.sel .s2-body { stroke: var(--accent); }
+.s2-el.click:hover .s2-block { fill: #1e2a37; }
+
+.s2-tip { position: absolute; z-index: 3; width: 300px; pointer-events: none; display: flex; flex-direction: column; gap: 2px; padding: 7px 10px; border-radius: var(--r-sm); background: var(--panel-3); border: 1px solid var(--line-2); box-shadow: var(--shadow); font-size: 12.5px; }
+.s2-tip span { color: var(--muted); }
+.s2-card { position: absolute; z-index: 4; width: 320px; display: flex; flex-direction: column; gap: 6px; padding: 10px 12px; font-size: 13px; box-shadow: var(--shadow); border-color: var(--line-2); cursor: default; user-select: text; }
+.s2-card-head { display: flex; align-items: baseline; gap: 10px; }
+.s2-card-head b { font-size: 16px; }
+.s2-card-head span { flex: 1; min-width: 0; }
+.s2-card-head .btn { align-self: center; }
+.s2-verify { color: var(--warn); }
+.s2-list { position: absolute; z-index: 2; left: 8px; right: 8px; bottom: 8px; max-height: 55%; display: flex; flex-direction: column; box-shadow: var(--shadow); border-color: var(--line-2); cursor: default; user-select: text; }
+.s2-list-head { display: flex; align-items: center; gap: 12px; padding: 8px 12px; border-bottom: 1px solid var(--line); }
+.s2-list-head h2 { flex: 1; font-size: 14px; }
+.s2-list-body { overflow-y: auto; min-height: 0; }
+.s2-list td:first-child { white-space: nowrap; font-weight: 600; }
+.s2-list td:nth-child(2) { white-space: nowrap; }
+.s2-list .s2-verify { font-size: 12px; }
+.s2-foot { display: flex; justify-content: space-between; gap: 12px; font-size: 11.5px; color: var(--faint); white-space: nowrap; overflow: hidden; }
+
+@media (max-width: 1320px) {
+  .s2-main.with-panel { grid-template-columns: minmax(0, 1fr) 318px; gap: 10px; }
+  .s2-pick select { width: 190px; }
+  .s2 .page-head p { display: none; }
+}
+
+@media print {
+  @page { size: A4 landscape; margin: 8mm; }
+  body:has(.s2) { overflow: visible; background: #fff; }
+  body:has(.s2) .side, body:has(.s2) .top, body:has(.s2) .toasts, .s2 .page-head, .s2-bar, .s2-side, .s2-tip, .s2-card, .s2-list, .s2-foot { display: none !important; }
+  body:has(.s2) .app { display: block; height: auto; }
+  body:has(.s2) .app-main { overflow: visible; }
+  .s2.page { padding: 0; height: auto; overflow: visible; }
+  .s2-main, .s2-main.with-panel { display: block; }
+  .s2-center { display: block; }
+  .s2-canvas { flex: none; border: 0; border-radius: 0; background: #fff; width: 100%; height: 185mm; }
+  .s2-svg { width: 100%; height: 185mm; }
+}

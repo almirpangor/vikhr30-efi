@@ -1,0 +1,19 @@
+M48
+; VIKHR-30 EFI rev A - non-plated holes
+; FORMAT={-:-/ absolute / metric / decimal}
+; #@! TF.FileFunction,NonPlated,1,2,NPTH
+FMAT,2
+METRIC
+T1C3.200
+%
+G90
+G05
+T1
+X4.0000Y96.0000
+X144.0000Y96.0000
+X4.0000Y4.0000
+X144.0000Y4.0000
+X22.7000Y28.8000
+X6.3000Y59.2000
+T0
+M30

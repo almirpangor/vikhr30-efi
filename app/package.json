@@ -1,0 +1,2 @@
+{ "name": "vikhr30-efi", "version": "2.0.0", "private": true, "type": "module",
+  "scripts": { "build": "node build.mjs", "typecheck": "tsc -p .", "test": "NODE_PATH=/opt/npm-tools/node_modules tsx --test --test-timeout=250000 tests/core.test.ts" } }

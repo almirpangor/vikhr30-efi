@@ -1,0 +1,2 @@
+889636b39640e6c98f97545dbf5f8def9e4aaee3da858745e11ef87d364cee0c  vikhr30_ecu_v0.8_bt_diag.bin
+e6ae93eac750ca817013e9fc3ca225676e5e8d0e9c97347c72a0bc88ed495f93  vikhr30_ecu_v0.8_bt_diag.hex

@@ -1,0 +1,48 @@
+/* Панель измерения цепи — общая для страниц «Схема» и «3D-схема». */
+.sch-panel { overflow-y: auto; display: flex; flex-direction: column; gap: 12px; padding: 14px; }
+.sch-panel section { display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--line); padding-top: 12px; }
+.sch-panel h3 { font-size: 11.5px; }
+.sch-title { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.sch-title > div { display: flex; flex-direction: column; gap: 3px; align-items: flex-start; min-width: 0; }
+.sch-name { display: inline-flex; align-items: center; gap: 8px; font-size: 18px; }
+.sch-name .sch-swatch { height: 18px; }
+.sch-probes { display: flex; flex-direction: column; gap: 5px; font-size: 13px; }
+.sch-probes > div { display: flex; gap: 8px; align-items: baseline; }
+.sch-dot { flex: none; width: 10px; height: 10px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.5); position: relative; top: 1px; }
+.sch-dot.red { background: #e0251f; } .sch-dot.black { background: #0b0b0c; }
+.sch-meter { display: flex; gap: 12px; align-items: center; }
+.sch-lcd { flex: none; min-width: 150px; padding: 6px 12px; border-radius: 8px; background: #a9b79b; color: #10180f; border: 2px solid #2a3340; box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.35); display: flex; align-items: baseline; justify-content: flex-end; gap: 6px; }
+.sch-lcd .num { font-size: 32px; font-weight: 700; line-height: 1.1; letter-spacing: 0.02em; }
+.sch-lcd small { font-size: 15px; font-weight: 700; }
+.sch-meter-info { display: flex; flex-direction: column; gap: 3px; font-size: 12.5px; min-width: 0; }
+.sch-meter-info b { color: var(--text); font-weight: 600; display: block; white-space: nowrap; }
+.sch-now { font-size: 13px; color: var(--text); }
+.sch-input { display: flex; align-items: center; gap: 10px; font-size: 13px; }
+.sch-input .input { width: 120px; }
+.sch-verdict { font-size: 13px; padding: 8px 10px; border-radius: var(--r-sm); border: 1px solid var(--line-2); }
+.sch-verdict.ok { color: var(--ok); background: var(--ok-soft); border-color: rgba(61, 220, 132, 0.45); }
+.sch-verdict.bad { color: #ffb0b3; background: var(--danger-soft); border-color: rgba(255, 90, 95, 0.5); }
+.sch-verdict.bad b { color: var(--danger); }
+.sch-panel .btn { align-self: flex-start; }
+.sch-settings { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; font-size: 12.5px; }
+.sch-settings .tag { white-space: normal; }
+
+.sch-scope { position: relative; padding: 0 0 0 34px; }
+.sch-scope svg { display: block; width: 100%; aspect-ratio: 5 / 4; border-radius: 6px; border: 1px solid var(--line-2); }
+.sch-scope .grid { stroke: rgba(120, 255, 200, 0.13); stroke-width: 1; }
+.sch-scope .axis { stroke: rgba(120, 255, 200, 0.3); stroke-width: 1; }
+.sch-scope .zero { stroke: rgba(255, 255, 255, 0.35); stroke-width: 1; stroke-dasharray: 4 4; }
+.sch-scope .trace { fill: none; stroke: #ffe14a; stroke-width: 2; stroke-linejoin: round; }
+.sch-scope-screen { position: relative; }
+.sch-scope-y { position: absolute; left: -34px; top: 0; bottom: 0; width: 30px; font-size: 10.5px; color: var(--muted); }
+.sch-scope-y span { position: absolute; right: 0; transform: translateY(-50%); }
+.sch-scope-y span:first-child { transform: translateY(0); } .sch-scope-y span:last-child { transform: translateY(-100%); }
+.sch-scope-x { position: relative; height: 16px; margin-top: 3px; font-size: 10.5px; color: var(--muted); }
+.sch-scope-x span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+.sch-scope-x span:first-child { transform: none; } .sch-scope-x span:last-child:not(:first-child) { transform: translateX(-100%); }
+.sch-scope-units { display: flex; flex-direction: column; gap: 1px; font-size: 11px; color: var(--faint); margin-top: 4px; }
+.sch-foot { margin-top: auto; padding-top: 10px; border-top: 1px solid var(--line); font-size: 11px; color: var(--faint); }
+.sch-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+@media (max-width: 1320px) {
+  .sch-lcd { min-width: 124px; } .sch-lcd .num { font-size: 26px; }
+}

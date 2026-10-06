@@ -1,0 +1,312 @@
+     VMA      LMA     Size Align Out     In      Symbol
+       0        0        0     1 _estack = ORIGIN ( RAM ) + LENGTH ( RAM )
+ 8000000  8000000       ec     4 .isr_vector
+ 8000000  8000000       ec     4         build/arm/startup.o:(.isr_vector)
+ 8000000  8000000       ec     1                 vector_table
+ 80000ec  80000ec     453c     4 .text
+ 80000ec  80000ec        2     4         build/arm/startup.o:(.text.Default_Handler)
+ 80000ec  80000ec        0     1                 $t.0
+ 80000ed  80000ed        2     1                 Default_Handler
+ 80000ed  80000ed        2     1                 USB_LP_CAN1_RX0_IRQHandler
+ 80000f0  80000f0       5a     4         build/arm/startup.o:(.text.Reset_Handler)
+ 80000f0  80000f0        0     1                 $t.1
+ 80000f1  80000f1       5a     1                 Reset_Handler
+ 800014a  800014a       10     2         build/arm/main.o:(.text.SysTick_Handler)
+ 800014a  800014a        0     1                 $t.0
+ 800014b  800014b       10     1                 SysTick_Handler
+ 800015a  800015a        c     2         build/arm/main.o:(.text.USART1_IRQHandler)
+ 800015a  800015a        0     1                 $t.1
+ 800015b  800015b        c     1                 USART1_IRQHandler
+ 8000166  8000166       64     2         build/arm/main.o:(.text.serial_isr)
+ 8000166  8000166        0     1                 $t.2
+ 8000167  8000167       64     1                 serial_isr
+ 80001ca  80001ca        c     2         build/arm/main.o:(.text.USART2_IRQHandler)
+ 80001ca  80001ca        0     1                 $t.3
+ 80001cb  80001cb        c     1                 USART2_IRQHandler
+ 80001d6  80001d6       2a     2         build/arm/main.o:(.text.TIM2_IRQHandler)
+ 80001d6  80001d6        0     1                 $t.4
+ 80001d7  80001d7       2a     1                 TIM2_IRQHandler
+ 8000200  8000200      12c     4         build/arm/main.o:(.text.sched_run)
+ 8000200  8000200        0     1                 $t.5
+ 8000201  8000201      12c     1                 sched_run
+ 800032c  800032c      24c     2         build/arm/main.o:(.text.EXTI9_5_IRQHandler)
+ 800032c  800032c        0     1                 $t.6
+ 800032d  800032d      24c     1                 EXTI9_5_IRQHandler
+ 8000578  8000578      230     2         build/arm/main.o:(.text.schedule_cylinder)
+ 8000578  8000578        0     1                 $t.7
+ 8000579  8000579      230     1                 schedule_cylinder
+ 80007a8  80007a8     1222     4         build/arm/main.o:(.text.main)
+ 80007a8  80007a8        0     1                 $t.8
+ 80007a9  80007a9     1222     1                 main
+ 80019ca  80019ca      3c0     2         build/arm/main.o:(.text.read_sensors)
+ 80019ca  80019ca        0     1                 $t.9
+ 80019cb  80019cb      3c0     1                 read_sensors
+ 8001d8c  8001d8c       48     4         build/arm/main.o:(.text.port_char)
+ 8001d8c  8001d8c        0     1                 $t.10
+ 8001d8d  8001d8d       48     1                 port_char
+ 8001dd4  8001dd4       48     4         build/arm/main.o:(.text.port_line)
+ 8001dd4  8001dd4        0     1                 $t.11
+ 8001dd5  8001dd5       48     1                 port_line
+ 8001e1c  8001e1c      c88     4         build/arm/main.o:(.text.service_port)
+ 8001e1c  8001e1c        0     1                 $t.12
+ 8001e1d  8001e1d      c88     1                 service_port
+ 8002aa4  8002aa4       b6     2         build/arm/main.o:(.text.stop_actuator_test)
+ 8002aa4  8002aa4        0     1                 $t.13
+ 8002aa5  8002aa5       b6     1                 stop_actuator_test
+ 8002b5c  8002b5c      426     4         build/arm/main.o:(.text.print_status)
+ 8002b5c  8002b5c        0     1                 $t.14
+ 8002b5d  8002b5d      426     1                 print_status
+ 8002f84  8002f84       ee     4         build/arm/main.o:(.text.load_defaults)
+ 8002f84  8002f84        0     1                 $t.15
+ 8002f85  8002f85       ee     1                 load_defaults
+ 8003074  8003074       4a     4         build/arm/main.o:(.text.adc_read)
+ 8003074  8003074        0     1                 $t.16
+ 8003075  8003075       4a     1                 adc_read
+ 80030c0  80030c0       5e     4         build/arm/main.o:(.text.ntc_lookup)
+ 80030c0  80030c0        0     1                 $t.17
+ 80030c1  80030c1       5e     1                 ntc_lookup
+ 8003120  8003120       44     4         build/arm/main.o:(.text.parse_i32)
+ 8003120  8003120        0     1                 $t.18
+ 8003121  8003121       44     1                 parse_i32
+ 8003164  8003164      616     4         build/arm/main.o:(.text.set_parameter)
+ 8003164  8003164        0     1                 $t.19
+ 8003165  8003165      616     1                 set_parameter
+ 800377c  800377c      144     4         build/arm/main.o:(.text.save_calibration)
+ 800377c  800377c        0     1                 $t.20
+ 800377d  800377d      144     1                 save_calibration
+ 80038c0  80038c0      2c4     4         build/arm/main.o:(.text.start_actuator_test)
+ 80038c0  80038c0        0     1                 $t.21
+ 80038c1  80038c1      2c4     1                 start_actuator_test
+ 8003b84  8003b84       64     4         build/arm/main.o:(.text.port_u32)
+ 8003b84  8003b84        0     1                 $t.22
+ 8003b85  8003b85       64     1                 port_u32
+ 8003be8  8003be8       24     2         build/arm/main.o:(.text.port_i32)
+ 8003be8  8003be8        0     1                 $t.23
+ 8003be9  8003be9       24     1                 port_i32
+ 8003c0c  8003c0c       84     4         build/arm/main.o:(.text.print_param)
+ 8003c0c  8003c0c        0     1                 $t.24
+ 8003c0d  8003c0d       84     1                 print_param
+ 8003c90  8003c90       7a     2         build/arm/main.o:(.text.test_pulse)
+ 8003c90  8003c90        0     1                 $t.25
+ 8003c91  8003c91       7a     1                 test_pulse
+ 8003d0c  8003d0c       70     4         build/arm/main.o:(.text.injector_deadtime)
+ 8003d0c  8003d0c        0     1                 $t.26
+ 8003d0d  8003d0d       70     1                 injector_deadtime
+ 8003d7c  8003d7c       84     4         build/arm/main.o:(.text.bracket_value)
+ 8003d7c  8003d7c        0     1                 $t.27
+ 8003d7d  8003d7d       84     1                 bracket_value
+ 8003e00  8003e00       ac     2         build/arm/main.o:(.text.step_iac)
+ 8003e00  8003e00        0     1                 $t.28
+ 8003e01  8003e01       ac     1                 step_iac
+ 8003eac  8003eac       b0     4         build/arm/main.o:(.text.print_test_event)
+ 8003eac  8003eac        0     1                 $t.29
+ 8003ead  8003ead       b0     1                 print_test_event
+ 8003f5c  8003f5c      3ae     1         <internal>:(.rodata.str1.1)
+ 800430a  800430a       ea     2         build/arm/main.o:(.rodata.default_fuel)
+ 800430a  800430a       ea     1                 default_fuel
+ 80043f4  80043f4       ea     2         build/arm/main.o:(.rodata.default_ign)
+ 80043f4  80043f4       ea     1                 default_ign
+ 80044de  80044de       44     2         build/arm/main.o:(.rodata.cht_table)
+ 80044de  80044de       44     1                 cht_table
+ 8004522  8004522       44     2         build/arm/main.o:(.rodata.iat_table)
+ 8004522  8004522       44     1                 iat_table
+ 8004566  8004566       1a     2         build/arm/main.o:(.rodata.rpm_bins)
+ 8004566  8004566       1a     1                 rpm_bins
+ 8004580  8004580       12     2         build/arm/main.o:(.rodata.load_bins)
+ 8004580  8004580       12     1                 load_bins
+ 8004592  8004592        c     2         build/arm/main.o:(.rodata.warmup_permille.t)
+ 8004592  8004592        c     1                 warmup_permille.t
+ 800459e  800459e        c     2         build/arm/main.o:(.rodata.warmup_permille.f)
+ 800459e  800459e        c     1                 warmup_permille.f
+ 80045aa  80045aa       12     2         build/arm/main.o:(.rodata.injector_deadtime.vb)
+ 80045aa  80045aa       12     1                 injector_deadtime.vb
+ 80045bc  80045bc       12     2         build/arm/main.o:(.rodata.injector_deadtime.dt)
+ 80045bc  80045bc       12     1                 injector_deadtime.dt
+ 80045ce  80045ce        c     2         build/arm/main.o:(.rodata.coil_dwell.vb)
+ 80045ce  80045ce        c     1                 coil_dwell.vb
+ 80045da  80045da        c     2         build/arm/main.o:(.rodata.coil_dwell.fp)
+ 80045da  80045da        c     1                 coil_dwell.fp
+ 80045e6  80045e6       10     1         <internal>:(.rodata.cst16)
+ 80045f8  80045f8       14     4         build/arm/main.o:(.rodata..Lswitch.table.sched_run)
+ 80045f8  80045f8       14     1                 .Lswitch.table.sched_run
+ 800460c  800460c       1c     4         build/arm/main.o:(.rodata..Lswitch.table.print_test_event)
+ 800460c  800460c       1c     1                 .Lswitch.table.print_test_event
+ 8004628  8004628        0     1         . = ALIGN ( 4 )
+ 8004628  8004628        0     1         _etext = .
+ 8004628  8004628        0     1 _sidata = LOADADDR ( .data )
+20000000  8004628       20     2 .data
+20000000  8004628        0     1         . = ALIGN ( 4 )
+20000000  8004628        0     1         _sdata = .
+20000000  8004628        1     1         build/arm/main.o:(.data.tooth_index)
+20000000  8004628        1     1                 tooth_index
+20000002  800462a        2     2         build/arm/main.o:(.data.sensors.2)
+20000002  800462a        2     1                 sensors.2
+20000004  800462c        2     2         build/arm/main.o:(.data.sensors.3)
+20000004  800462c        2     1                 sensors.3
+20000006  800462e        2     2         build/arm/main.o:(.data.sensors.4)
+20000006  800462e        2     1                 sensors.4
+20000008  8004630        2     2         build/arm/main.o:(.data.sensors.5)
+20000008  8004630        2     1                 sensors.5
+2000000a  8004632        2     2         build/arm/main.o:(.data.sensors.6)
+2000000a  8004632        2     1                 sensors.6
+2000000c  8004634        1     2         build/arm/main.o:(.data.sensors.8)
+2000000c  8004634        1     1                 sensors.8
+2000000e  8004636        2     2         build/arm/main.o:(.data.sensors.9)
+2000000e  8004636        2     1                 sensors.9
+20000010  8004638        1     1         build/arm/main.o:(.data.stream_hz)
+20000010  8004638        1     1                 stream_hz
+20000012  800463a        2     2         build/arm/main.o:(.data.prepared_trigger_tenths)
+20000012  800463a        2     1                 prepared_trigger_tenths
+20000014  800463c        2     2         build/arm/main.o:(.data.prepared_advance_tenths)
+20000014  800463c        2     1                 prepared_advance_tenths
+20000016  800463e        2     2         build/arm/main.o:(.data.prepared_dwell_us)
+20000016  800463e        2     1                 prepared_dwell_us
+20000018  8004640        2     2         build/arm/main.o:(.data.prepared_fuel_us)
+20000018  8004640        2     1                 prepared_fuel_us
+2000001a  8004642        2     2         build/arm/main.o:(.data.accel_enrich_permille)
+2000001a  8004642        2     1                 accel_enrich_permille
+2000001c  8004644        2     2         build/arm/main.o:(.data.fixed_ign_tenths)
+2000001c  8004644        2     1                 fixed_ign_tenths
+2000001e  8004646        2     1         . = ALIGN ( 4 )
+20000020  8004648        0     1         _edata = .
+20000020 20000020     1820     4 .bss
+20000020 20000020        0     1         . = ALIGN ( 4 )
+20000020 20000020        0     1         _sbss = .
+20000020 20000020        4     4         build/arm/main.o:(.bss.ms_ticks)
+20000020 20000020        4     1                 ms_ticks
+20000024 20000024      ad0     4         build/arm/main.o:(.bss.wire_port)
+20000024 20000024      ad0     1                 wire_port
+20000af4 20000af4      ad0     4         build/arm/main.o:(.bss.bt_port)
+20000af4 20000af4      ad0     1                 bt_port
+200015c4 200015c4        4     4         build/arm/main.o:(.bss.tim2_high)
+200015c4 200015c4        4     1                 tim2_high
+200015c8 200015c8        1     1         build/arm/main.o:(.bss.tooth_seen)
+200015c8 200015c8        1     1                 tooth_seen
+200015cc 200015cc        4     4         build/arm/main.o:(.bss.previous_tooth_us)
+200015cc 200015cc        4     1                 previous_tooth_us
+200015d0 200015d0        1     1         build/arm/main.o:(.bss.crank_synced)
+200015d0 200015d0        1     1                 crank_synced
+200015d4 200015d4        4     4         build/arm/main.o:(.bss.tooth_acc)
+200015d4 200015d4        4     1                 tooth_acc
+200015d8 200015d8        2     2         build/arm/main.o:(.bss.engine_rpm)
+200015d8 200015d8        2     1                 engine_rpm
+200015da 200015da        1     1         build/arm/main.o:(.bss.normal_run)
+200015da 200015da        1     1                 normal_run
+200015dc 200015dc        4     4         build/arm/main.o:(.bss.last_crank_edge_us)
+200015dc 200015dc        4     1                 last_crank_edge_us
+200015e0 200015e0        1     1         build/arm/main.o:(.bss.crank_recent)
+200015e0 200015e0        1     1                 crank_recent
+200015e1 200015e1        1     1         build/arm/main.o:(.bss.actuator_test)
+200015e1 200015e1        1     1                 actuator_test
+200015e4 200015e4      200     4         build/arm/main.o:(.bss.cal)
+200015e4 200015e4      200     1                 cal
+200017e4 200017e4        2     2         build/arm/main.o:(.bss.iac_homing_remaining)
+200017e4 200017e4        2     1                 iac_homing_remaining
+200017e6 200017e6        2     2         build/arm/main.o:(.bss.sensors.0)
+200017e6 200017e6        2     1                 sensors.0
+200017e8 200017e8        2     2         build/arm/main.o:(.bss.sensors.1)
+200017e8 200017e8        2     1                 sensors.1
+200017ea 200017ea        2     2         build/arm/main.o:(.bss.sensors.7)
+200017ea 200017ea        2     1                 sensors.7
+200017ec 200017ec        4     4         build/arm/main.o:(.bss.last_sensor_ms)
+200017ec 200017ec        4     1                 last_sensor_ms
+200017f0 200017f0        4     4         build/arm/main.o:(.bss.last_stream_ms)
+200017f0 200017f0        4     1                 last_stream_ms
+200017f4 200017f4        1     1         build/arm/main.o:(.bss.ev_pending)
+200017f4 200017f4        1     1                 ev_pending
+200017f8 200017f8       14     4         build/arm/main.o:(.bss.ev_time)
+200017f8 200017f8       14     1                 ev_time
+2000180c 2000180c        2     2         build/arm/main.o:(.bss.fault_flags)
+2000180c 2000180c        2     1                 fault_flags
+2000180e 2000180e        1     1         build/arm/main.o:(.bss.cut_alternator)
+2000180e 2000180e        1     1                 cut_alternator
+2000180f 2000180f        1     1         build/arm/main.o:(.bss.prepared_fuel_cut)
+2000180f 2000180f        1     1                 prepared_fuel_cut
+20001810 20001810        1     4         build/arm/main.o:(.bss.core_clock_hz)
+20001810 20001810        1     1                 core_clock_hz
+20001811 20001811        1     1         build/arm/main.o:(.bss.clock_pll_ok)
+20001811 20001811        1     1                 clock_pll_ok
+20001814 20001814        1     4         build/arm/main.o:(.bss.apb1_clock_hz)
+20001814 20001814        1     1                 apb1_clock_hz
+20001815 20001815        1     1         build/arm/main.o:(.bss.current_o2_heater_pct)
+20001815 20001815        1     1                 current_o2_heater_pct
+20001816 20001816        2     2         build/arm/main.o:(.bss.previous_tps_tenths)
+20001816 20001816        2     1                 previous_tps_tenths
+20001818 20001818        1     1         build/arm/main.o:(.bss.iac_homed)
+20001818 20001818        1     1                 iac_homed
+2000181a 2000181a        2     2         build/arm/main.o:(.bss.peak_rpm)
+2000181a 2000181a        2     1                 peak_rpm
+2000181c 2000181c        4     4         build/arm/main.o:(.bss.actuator_test_deadline_ms)
+2000181c 2000181c        4     1                 actuator_test_deadline_ms
+20001820 20001820        2     2         build/arm/main.o:(.bss.actuator_test_steps)
+20001820 20001820        2     1                 actuator_test_steps
+20001824 20001824        4     4         build/arm/main.o:(.bss.actuator_test_next_ms)
+20001824 20001824        4     1                 actuator_test_next_ms
+20001828 20001828        2     2         build/arm/main.o:(.bss.current_advance_tenths)
+20001828 20001828        2     1                 current_advance_tenths
+2000182a 2000182a        2     2         build/arm/main.o:(.bss.current_fuel_us)
+2000182a 2000182a        2     1                 current_fuel_us
+2000182c 2000182c        4     4         build/arm/main.o:(.bss.last_iac_step_ms)
+2000182c 2000182c        4     1                 last_iac_step_ms
+20001830 20001830        2     2         build/arm/main.o:(.bss.iac_position)
+20001830 20001830        2     1                 iac_position
+20001832 20001832        2     2         build/arm/main.o:(.bss.iac_target)
+20001832 20001832        2     1                 iac_target
+20001834 20001834        4     4         build/arm/main.o:(.bss.last_iac_target_ms)
+20001834 20001834        4     1                 last_iac_target_ms
+20001838 20001838        1     1         build/arm/main.o:(.bss.iac_phase)
+20001838 20001838        1     1                 iac_phase
+2000183c 2000183c        4     4         build/arm/main.o:(.bss.o2_heater_start_ms)
+2000183c 2000183c        4     1                 o2_heater_start_ms
+20001840 20001840        0     1         . = ALIGN ( 4 )
+20001840 20001840        0     1         _ebss = .
+ 8007c00  8007c00        0     1 .calibration
+ 8007c00  8007c00        0     1         . = ALIGN ( 4 )
+ 8007c00  8007c00        0     1 
+ 8007c00  8007c00        0     1 
+ 8007c00  8007c00        0     1 
+ 8007c00  8007c00        0     1 
+       0        0     2f78     1 .debug_loclists
+       0        0       2e     1         build/arm/startup.o:(.debug_loclists)
+      2e       2e     2910     1         build/arm/main.o:(.debug_loclists)
+    293e     293e      63a     1         build/arm/rt.o:(.debug_loclists)
+       0        0      61b     1 .debug_abbrev
+       0        0       b3     1         build/arm/startup.o:(.debug_abbrev)
+      b3       b3      45e     1         build/arm/main.o:(.debug_abbrev)
+     511      511      10a     1         build/arm/rt.o:(.debug_abbrev)
+       0        0     547b     1 .debug_info
+       0        0       94     1         build/arm/startup.o:(.debug_info)
+      94       94     4ec6     1         build/arm/main.o:(.debug_info)
+    4f5a     4f5a      521     1         build/arm/rt.o:(.debug_info)
+       0        0      8d3     1 .debug_rnglists
+       0        0       17     1         build/arm/startup.o:(.debug_rnglists)
+      17       17      87e     1         build/arm/main.o:(.debug_rnglists)
+     895      895       3e     1         build/arm/rt.o:(.debug_rnglists)
+       0        0      7d0     1 .debug_str_offsets
+       0        0       38     1         build/arm/startup.o:(.debug_str_offsets)
+      38       38      71c     1         build/arm/main.o:(.debug_str_offsets)
+     754      754       7c     1         build/arm/rt.o:(.debug_str_offsets)
+       0        0     1305     1 .debug_str
+       0        0     1305     1         <internal>:(.debug_str)
+       0        0      880     1 .debug_addr
+       0        0       14     1         build/arm/startup.o:(.debug_addr)
+      14       14      828     1         build/arm/main.o:(.debug_addr)
+     83c      83c       44     1         build/arm/rt.o:(.debug_addr)
+       0        0       41     1 .ARM.attributes
+       0        0       41     1         build/arm/startup.o:(.ARM.attributes)
+       0        0      4fc     4 .debug_frame
+       0        0       40     4         build/arm/startup.o:(.debug_frame)
+      40       40      3b8     4         build/arm/main.o:(.debug_frame)
+     3f8      3f8      104     4         build/arm/rt.o:(.debug_frame)
+       0        0     36f3     1 .debug_line
+       0        0       ab     1         build/arm/startup.o:(.debug_line)
+      ab       ab     333f     1         build/arm/main.o:(.debug_line)
+    33ea     33ea      309     1         build/arm/rt.o:(.debug_line)
+       0        0       9b     1 .debug_line_str
+       0        0       9b     1         <internal>:(.debug_line_str)
+       0        0      960     4 .symtab
+       0        0      960     4         <internal>:(.symtab)
+       0        0       e2     1 .shstrtab
+       0        0       e2     1         <internal>:(.shstrtab)
+       0        0      6f6     1 .strtab
+       0        0      6f6     1         <internal>:(.strtab)

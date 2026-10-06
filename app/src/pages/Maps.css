@@ -1,0 +1,60 @@
+/* Карты топлива и зажигания */
+.maps-page { gap: 10px; }
+.maps-actions { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; justify-content: flex-end; }
+.maps-actions .sep { width: 1px; height: 20px; background: var(--line-2); margin: 0 2px; }
+.maps-info { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 13px; min-height: 24px; }
+.maps-info .spacer { flex: 1; }
+.maps-now b { font-family: var(--mono); font-weight: 600; }
+.maps-why { color: var(--warn); font-size: 12.5px; }
+
+.maps-grid { flex: none; overflow: auto; border-radius: var(--r-sm); background: var(--panel); border: 1px solid var(--line); padding: 4px; outline: none; }
+.maps-grid:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.maps-tbl { width: 100%; min-width: 800px; table-layout: fixed; border-collapse: separate; border-spacing: 1px; font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 12.5px; user-select: none; }
+.maps-tbl th { font-weight: 500; color: var(--muted); font-size: 11.5px; height: 24px; padding: 0 4px; text-align: center; white-space: nowrap; }
+.maps-tbl th.corner { width: 84px; font-family: var(--font); font-size: 11px; color: var(--faint); }
+.maps-tbl tbody th { text-align: right; padding-right: 8px; }
+.maps-tbl th.hot { color: var(--text); background: var(--panel-3); border-radius: 4px; }
+.maps-tbl td {
+  position: relative; height: 28px; padding: 0; text-align: center; cursor: cell; border-radius: 3px;
+  box-shadow: inset 0 var(--st, 0) 0 #fff, inset 0 calc(-1 * var(--sb, 0px)) 0 #fff, inset var(--sl, 0) 0 0 #fff, inset calc(-1 * var(--sr, 0px)) 0 0 #fff;
+}
+.maps-tbl td.sel::after { content: ""; position: absolute; inset: 0; background: rgba(255, 255, 255, 0.2); border-radius: 3px; pointer-events: none; }
+.maps-tbl td.sel-t { --st: 2px; } .maps-tbl td.sel-b { --sb: 2px; } .maps-tbl td.sel-l { --sl: 2px; } .maps-tbl td.sel-r { --sr: 2px; }
+.maps-tbl td.cur { outline: 2px solid #0a0f15; outline-offset: -4px; }
+.maps-tbl td span { position: relative; z-index: 1; }
+/* отличие от ECU: уголок */
+.maps-tbl td.diff::before { content: ""; position: absolute; top: 0; right: 0; border-style: solid; border-width: 0 10px 10px 0; border-color: transparent #fff transparent transparent; filter: drop-shadow(-1px 1px 0 rgba(10, 15, 21, 0.85)); z-index: 2; pointer-events: none; }
+.maps-tbl td.diff span { text-decoration: underline; text-underline-offset: 3px; }
+/* рабочая точка двигателя */
+.maps-wp { position: absolute; inset: 3px; border-radius: 6px; border: 1.5px solid rgba(255, 255, 255, 0.75); box-shadow: 0 0 0 1px rgba(10, 15, 21, 0.75); pointer-events: none; z-index: 2; }
+.maps-wp.lead { inset: 2px; border: 2.5px solid #fff; box-shadow: 0 0 0 1.5px #0a0f15, 0 0 10px 2px rgba(255, 255, 255, 0.7); }
+.maps-edit { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 3; border: 2px solid var(--accent); border-radius: 3px; background: var(--bg); color: var(--text); text-align: center; font: inherit; padding: 0; outline: none; }
+
+.maps-bottom { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 520px) minmax(0, 1fr); gap: 12px; }
+.maps-tools { display: flex; flex-direction: column; gap: 9px; overflow: auto; padding: 12px 14px; }
+.maps-tools .row { gap: 6px; }
+.maps-tools .lbl { color: var(--muted); font-size: 12.5px; }
+.maps-tools .input { width: 76px; height: 28px; text-align: right; }
+.maps-stat { font-size: 13px; }
+.maps-stat b { font-family: var(--mono); font-weight: 600; }
+.maps-legend { display: flex; align-items: center; gap: 8px; font-size: 12px; }
+.maps-legend .bar { flex: 1; height: 10px; border-radius: 5px; min-width: 80px; }
+.maps-legend b { font-family: var(--mono); font-weight: 500; }
+.maps-keys { color: var(--faint); font-size: 11.5px; line-height: 1.9; }
+.maps-view { min-height: 240px; height: 100%; }
+.maps-view .maps-reset { position: absolute; right: 10px; top: 10px; }
+.maps-view .maps-hint { position: absolute; left: 12px; top: 10px; font-size: 11.5px; color: var(--muted); pointer-events: none; }
+.maps-l3d-layer { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.maps-l3d { position: absolute; transform: translate(-50%, -50%); font-family: var(--mono); font-size: 10.5px; color: var(--muted); white-space: nowrap; text-shadow: 0 0 3px #070b10, 0 0 3px #070b10; }
+.maps-l3d.title { font-family: var(--font); font-size: 11.5px; color: var(--text); }
+.maps-l3d.lvl { transform: translate(6px, -50%); }
+.maps-l3d-wp { font-family: var(--mono); color: var(--text); }
+
+@media (max-height: 820px), (max-width: 1180px) {
+  .maps-page.page.fill { height: auto; overflow: visible; }
+  .maps-bottom { flex: none; }
+  .maps-view { height: 340px; }
+}
+@media (max-width: 1000px) {
+  .maps-bottom { grid-template-columns: minmax(0, 1fr); }
+}

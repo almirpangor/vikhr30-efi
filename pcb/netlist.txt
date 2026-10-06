@@ -1,0 +1,209 @@
+СПИСОК ЦЕПЕЙ ПЛАТЫ «VIKHR-30 EFI rev A» — получен программно из листов схемы (pcb/netlist.ts)
+
+Элементов на плате: 94; цепей: 63; выводов в цепях: 258
+
+ЭЛЕМЕНТЫ НА ПЛАТЕ (обозначение | номинал | корпус | вывод=цепь)
+A1    Blue Pill STM32F103C6T6      BLUEPILL_2x20    JL1=(NC) JL2=PC13 JL3=(NC) JL4=(NC) JL5=PA0 JL6=PA1 JL7=(NC) JL8=(NC) JL9=PA4 JL10=PA5 JL11=PA6 JL12=PA7 JL13=PB0 JL14=PB1 JL15=PB10 JL16=PB11 JL17=(NC) JL18=V33 JL19=GND JL20=GND JR1=V33 JR2=GND JR3=V5 JR4=PB9 JR5=PB8 JR6=PB7 JR7=PB6 JR8=PB5 JR9=(NC) JR10=(NC) JR11=(NC) JR12=(NC) JR13=(NC) JR14=PA10 JR15=PA9 JR16=PA8 JR17=PB15 JR18=PB14 JR19=PB13 JR20=PB12
+A2    HC-06                        HDR_1x6          1=PB14 2=PA9_A2 3=PA10_A2 4=GND 5=V5 6=(NC)
+A5    LM2596S, 5,00 В              LM2596_MODULE    1=V12 2=GND 3=V5 4=GND
+C1    470 мкФ × 25 В               CP_D8_P3.5       1=V12 2=GND
+C2    47 мкФ × 63 В                CP_D6.3_P2.5     1=V5S 2=GND
+C3    0,1 мкФ                      C_DISC_5.08      1=PA0 2=GND
+C4    0,1 мкФ                      C_DISC_5.08      1=PA1 2=GND
+C5    0,1 мкФ                      C_DISC_5.08      1=PA4 2=GND
+C6    0,1 мкФ                      C_DISC_5.08      1=PA5 2=GND
+C7    0,1 мкФ                      C_DISC_5.08      1=PA6 2=GND
+C8    0,1 мкФ                      C_DISC_5.08      1=PA7 2=GND
+C9    0,1 мкФ                      C_DISC_5.08      1=V5 2=GND
+C13   1 нФ                         C_DISC_5.08      1=PB5 2=GND
+C14   1 нФ                         C_DISC_5.08      1=PB13 2=GND
+C15   1 нФ                         C_DISC_5.08      1=PB12 2=GND
+C16   47 мкФ × 63 В                CP_D6.3_P2.5     1=V5 2=GND
+C17   47 мкФ × 63 В                CP_D6.3_P2.5     1=V12 2=GND
+D1    SR560                        DO-201AD_15.24   1=V12 2=N_D1_A
+D2    SM8S30A                      DO-218AB         1=V12 2=GND
+D3    1N4007                       DO-41_10.16      1=F2 2=INJ
+D4    1N4007                       DO-41_10.16      1=F2 2=HEAT
+D5    1N4007                       DO-41_10.16      1=F2 2=RELAY
+D6    BAR43S                       SOT-23           1=GND 2=V33 3=PA0
+D7    BAR43S                       SOT-23           1=GND 2=V33 3=PA1
+D8    BAR43S                       SOT-23           1=GND 2=V33 3=PA6
+D9    BAR43S                       SOT-23           1=GND 2=V33 3=PA7
+D11   BAR43S                       SOT-23           1=GND 2=V33 3=PB5
+L1    47 мкГн                      CDRH125          1=V5 2=V5S
+Q1    IRGS14C40L                   TO-263-2         1=G1 2=COIL1 3=GND
+Q2    IRGS14C40L                   TO-263-2         1=G2 2=COIL2 3=GND
+Q3    AO3400A                      SOT-23           1=N_Q3_1 2=GND 3=N_Q3_3
+Q4    AO3400A                      SOT-23           1=N_Q3_3 2=GND 3=G1
+Q5    AO3400A                      SOT-23           1=N_Q5_1 2=GND 3=N_Q5_3
+Q6    AO3400A                      SOT-23           1=N_Q5_3 2=GND 3=G2
+Q7    IRLZ44N                      TO-220_V         1=N_Q7_1 2=INJ 3=GND
+Q8    IRLZ44N                      TO-220_V         1=N_Q8_1 2=HEAT 3=GND
+Q9    BC547C                       TO-92            1=RELAY 2=N_Q9_2 3=GND
+R1    10 кОм                       R_AXIAL_10.16    1=TPS_SIG 2=N_R1_2
+R2    20 кОм                       R_AXIAL_10.16    1=N_R1_2 2=GND
+R3    1 кОм                        R_AXIAL_10.16    1=N_R1_2 2=PA0
+R4    10 кОм                       R_AXIAL_10.16    1=MAP_SIG 2=N_R4_2
+R5    20 кОм                       R_AXIAL_10.16    1=N_R4_2 2=GND
+R6    1 кОм                        R_AXIAL_10.16    1=N_R4_2 2=PA1
+R7    2,4 кОм                      R_AXIAL_10.16    1=V33 2=N_R7_2
+R8    91 Ом                        R_AXIAL_10.16    1=N_R7_2 2=PA4_X4
+R9    1 кОм                        R_AXIAL_10.16    1=PA4_X4 2=PA4
+R10   2,4 кОм                      R_AXIAL_10.16    1=V33 2=N_R10_2
+R11   91 Ом                        R_AXIAL_10.16    1=N_R10_2 2=PA5_X5
+R12   1 кОм                        R_AXIAL_10.16    1=PA5_X5 2=PA5
+R13   47 кОм                       R_AXIAL_10.16    1=V12 2=PA6
+R14   10 кОм                       R_AXIAL_10.16    1=PA6 2=GND
+R15   10 кОм                       R_AXIAL_10.16    1=PA7_X6 2=PA7
+R16   4,7 кОм                      R_AXIAL_10.16    1=V33 2=PB5_X7
+R17   1 кОм                        R_AXIAL_10.16    1=PB5_X7 2=PB5
+R18   10 кОм                       R_AXIAL_10.16    1=V33 2=PB13_X8
+R19   1 кОм                        R_AXIAL_10.16    1=PB13_X8 2=PB13
+R20   10 кОм                       R_AXIAL_10.16    1=V33 2=PB12_X9
+R21   1 кОм                        R_AXIAL_10.16    1=PB12_X9 2=PB12
+R22   1 кОм                        R_AXIAL_10.16    1=PA9 2=PA9_A2
+R23   1 кОм                        R_AXIAL_10.16    1=PA10 2=PA10_A2
+R24   330 Ом                       R_AXIAL_10.16    1=PB0 2=N_Q3_1
+R25   10 кОм                       R_AXIAL_10.16    1=N_Q3_1 2=GND
+R26   1 кОм                        R_AXIAL_10.16    1=V5 2=N_Q3_3
+R27   470 Ом                       R_AXIAL_10.16    1=V5 2=G1
+R28   330 Ом                       R_AXIAL_10.16    1=PB1 2=N_Q5_1
+R29   10 кОм                       R_AXIAL_10.16    1=N_Q5_1 2=GND
+R30   1 кОм                        R_AXIAL_10.16    1=V5 2=N_Q5_3
+R31   470 Ом                       R_AXIAL_10.16    1=V5 2=G2
+R32   100 Ом                       R_AXIAL_10.16    1=PB10 2=N_Q7_1
+R33   100 кОм                      R_AXIAL_10.16    1=N_Q7_1 2=GND
+R34   100 Ом                       R_AXIAL_10.16    1=PB15 2=N_Q8_1
+R35   100 кОм                      R_AXIAL_10.16    1=N_Q8_1 2=GND
+R36   1 кОм                        R_AXIAL_10.16    1=PB11 2=N_Q9_2
+R37   10 кОм                       R_AXIAL_10.16    1=N_Q9_2 2=GND
+R38   10 кОм                       R_AXIAL_10.16    1=V33 2=PC13
+U3    L293DD                       SO-20W           1=PA8 2=PB6 3=IAC_A1 4=GND 5=GND 6=GND 7=GND 8=IAC_A2 9=PB7 10=V12 11=PA8 12=PB8 13=IAC_B1 14=GND 15=GND 16=GND 17=GND 18=IAC_B2 19=PB9 20=V5
+X1    Клеммник 2 конт.             TERM_5.08_2      1=BAT 2=GND
+X2    JST XH 3 конт.               JST_XH_3         1=V5S 2=TPS_SIG 3=GND
+X3    JST XH 3 конт.               JST_XH_3         1=V5S 2=MAP_SIG 3=GND
+X4    JST XH 2 конт.               JST_XH_2         1=PA4_X4 2=GND
+X5    JST XH 2 конт.               JST_XH_2         1=PA5_X5 2=GND
+X6    JST XH 2 конт.               JST_XH_2         1=PA7_X6 2=GND
+X7    JST XH 3 конт.               JST_XH_3         1=V5S 2=PB5_X7 3=GND
+X8    JST XH 2 конт.               JST_XH_2         1=PB13_X8 2=GND
+X9    JST XH 2 конт.               JST_XH_2         1=PB12_X9 2=GND
+X10   Клеммник 2 конт.             TERM_5.08_2      1=F2 2=COIL1
+X11   Клеммник 2 конт.             TERM_5.08_2      1=F2 2=COIL2
+X12   Клеммник 2 конт.             TERM_5.08_2      1=F2 2=INJ
+X13   Клеммник 2 конт.             TERM_5.08_2      1=F2 2=RELAY
+X14   Клеммник 2 конт.             TERM_5.08_2      1=F2 2=HEAT
+X15   JST XH 4 конт.               TERM_5.08_4      1=IAC_A1 2=IAC_A2 3=IAC_B1 4=IAC_B2
+X16   JST XH 4 конт. (USB-UART A3) JST_XH_4         1=GND 2=PA9 3=PA10 4=(NC)
+XF1   Клеммник 2 конт. к держателю F1 (2 А) TERM_5.08_2      1=BAT 2=N_D1_A
+XF2   Клеммник 2 конт. к держателю F2 (10 А) TERM_5.08_2      1=BAT 2=F2
+
+ЦЕПИ (имя | название | выводы)
+BAT          BAT+        X1.1 XF1.1 XF2.1
+COIL1        COIL1−      Q1.2 X10.2
+COIL2        COIL2−      Q2.2 X11.2
+F2           +12V_F2     D3.1 D4.1 D5.1 X10.1 X11.1 X12.1 X13.1 X14.1 XF2.2
+G1           IGN1_GATE   Q1.1 Q4.3 R27.2
+G2           IGN2_GATE   Q2.1 Q6.3 R31.2
+GND          GND         A1.JL19 A1.JL20 A1.JR2 A2.4 A5.2 A5.4 C1.2 C2.2 C3.2 C4.2 C5.2 C6.2 C7.2 C8.2 C9.2 C13.2 C14.2 C15.2 C16.2 C17.2 D2.2 D6.1 D7.1 D8.1 D9.1 D11.1 Q1.3 Q2.3 Q3.2 Q4.2 Q5.2 Q6.2 Q7.3 Q8.3 Q9.3 R2.2 R5.2 R14.2 R25.2 R29.2 R33.2 R35.2 R37.2 U3.4 U3.5 U3.6 U3.7 U3.14 U3.15 U3.16 U3.17 X1.2 X2.3 X3.3 X4.2 X5.2 X6.2 X7.3 X8.2 X9.2 X16.1
+HEAT         HEATER−     D4.2 Q8.2 X14.2
+IAC_A1       IAC_A1      U3.3 X15.1
+IAC_A2       IAC_A2      U3.8 X15.2
+IAC_B1       IAC_B1      U3.13 X15.3
+IAC_B2       IAC_B2      U3.18 X15.4
+INJ          INJ−        D3.2 Q7.2 X12.2
+MAP_SIG      MAP         R4.1 X3.2
+N_D1_A       N_D1_A      D1.2 XF1.2
+N_Q3_1       N_Q3_1      Q3.1 R24.2 R25.1
+N_Q3_3       N_Q3_3      Q3.3 Q4.1 R26.2
+N_Q5_1       N_Q5_1      Q5.1 R28.2 R29.1
+N_Q5_3       N_Q5_3      Q5.3 Q6.1 R30.2
+N_Q7_1       N_Q7_1      Q7.1 R32.2 R33.1
+N_Q8_1       N_Q8_1      Q8.1 R34.2 R35.1
+N_Q9_2       N_Q9_2      Q9.2 R36.2 R37.1
+N_R1_2       N_R1_2      R1.2 R2.1 R3.1
+N_R4_2       N_R4_2      R4.2 R5.1 R6.1
+N_R7_2       N_R7_2      R7.2 R8.1
+N_R10_2      N_R10_2     R10.2 R11.1
+PA0          PA0         A1.JL5 C3.1 D6.3 R3.2
+PA1          PA1         A1.JL6 C4.1 D7.3 R6.2
+PA4          PA4         A1.JL9 C5.1 R9.2
+PA4_X4       PA4_X4      R8.2 R9.1 X4.1
+PA5          PA5         A1.JL10 C6.1 R12.2
+PA5_X5       PA5_X5      R11.2 R12.1 X5.1
+PA6          PA6         A1.JL11 C7.1 D8.3 R13.2 R14.1
+PA7          PA7         A1.JL12 C8.1 D9.3 R15.2
+PA7_X6       PA7_X6      R15.1 X6.1
+PA8          PA8         A1.JR16 U3.1 U3.11
+PA9          PA9         A1.JR15 R22.1 X16.2
+PA9_A2       PA9_A2      A2.2 R22.2
+PA10         PA10        A1.JR14 R23.1 X16.3
+PA10_A2      PA10_A2     A2.3 R23.2
+PB0          PB0         A1.JL13 R24.1
+PB1          PB1         A1.JL14 R28.1
+PB5          PB5         A1.JR8 C13.1 D11.3 R17.2
+PB5_X7       PB5_X7      R16.2 R17.1 X7.2
+PB6          PB6         A1.JR7 U3.2
+PB7          PB7         A1.JR6 U3.9
+PB8          PB8         A1.JR5 U3.12
+PB9          PB9         A1.JR4 U3.19
+PB10         PB10        A1.JL15 R32.1
+PB11         PB11        A1.JL16 R36.1
+PB12         PB12        A1.JR20 C15.1 R21.2
+PB12_X9      PB12_X9     R20.2 R21.1 X9.1
+PB13         PB13        A1.JR19 C14.1 R19.2
+PB13_X8      PB13_X8     R18.2 R19.1 X8.1
+PB14         PB14        A1.JR18 A2.1
+PB15         PB15        A1.JR17 R34.1
+PC13         PC13        A1.JL2 R38.2
+RELAY        RELAY−      D5.2 Q9.1 X13.2
+TPS_SIG      TPS         R1.1 X2.2
+V5           +5V_ECU     A1.JR3 A2.5 A5.3 C9.1 C16.1 L1.1 R26.1 R27.1 R30.1 R31.1 U3.20
+V5S          +5V_SENS    C2.1 L1.2 X2.1 X3.1 X7.1
+V12          +12V_PROT   A5.1 C1.1 C17.1 D1.1 D2.1 R13.1 U3.10
+V33          +3V3        A1.JL18 A1.JR1 D6.2 D7.2 D8.2 D9.2 D11.2 R7.1 R10.1 R16.1 R18.1 R20.1 R38.1
+
+ВНЕ ПЛАТЫ (подключаются через разъёмы)
+GB1   12 В                           1=BAT 2=GND
+F1    2 А                            1=BAT 2=N_D1_A
+F2    10 А                           1=BAT 2=F2
+A3    USB-UART PL2303HX              GND=GND TXD=PA10 RXD=PA9 +5V=(NC) 3V3=(NC)
+A4    ST-Link V2                     GND=GND SWDIO=SWDIO SWCLK=SWCLK 3.3V=(NC)
+RP1   Датчик дросселя                1=V5S 2=GND 3=TPS_SIG
+B2    MPX4115AP                      2:GND=GND 3:Vs=V5S 1:Вых.=MAP_SIG
+RT1   NTC 10 кОм B3950               1=PA4_X4 2=GND
+RT2   NTC 10 кОм B3950               1=PA5_X5 2=GND
+B3    Лямбда-зонд                    1/Масса=GND 2/1=F2 1/Сигн.=PA7_X6 2/2=HEAT
+B1    SS441A                         2:GND=GND 1:+=V5S 3:Вых.=PB5_X7
+S1    Перемычка SERVICE              1=PB13_X8 2=GND
+S2    Чека STOP                      1=PB12_X9 2=GND
+M1    Бензонасос                     1=N_K1_1_2 2=GND
+T1    Катушка зажигания 1            1=F2 2=COIL1
+T2    Катушка зажигания 2            1=F2 2=COIL2
+Y1    Форсунка Bosch 0 280 158 117   1=F2 2=INJ
+K1    Реле 12 В 30 А                 1=F2 2=RELAY 1/1=F2 1/2=N_K1_1_2
+M2    Шаговый РХХ                    1/1=IAC_A1 1/2=IAC_A2 2/1=IAC_B1 2/2=IAC_B2
+
+ПРЕОБРАЗОВАНИЯ «СХЕМА → ПЛАТА»
+ - F1: держатель ножевого предохранителя вне платы; на плате клеммник XF1: 1 → BAT, 2 → N_D1_A.
+ - F2: держатель ножевого предохранителя вне платы; на плате клеммник XF2: 1 → BAT, 2 → F2.
+ - A3 (USB-UART) на плату не ставится: разъём X16 JST XH 4 конт.: 1 GND, 2 → RXD адаптера (PA9), 3 ← TXD адаптера (PA10), 4 не подключён (3V3 адаптера).
+ - A2 (HC-06): гнездо 1×6, порядок как на модуле: 1 STATE, 2 RXD, 3 TXD, 4 GND, 5 VCC, 6 EN (не подключён).
+ - A1: контакты SWD (S1…S4) находятся на торце самой Blue Pill и на плату не выводятся; A4 (ST-Link) подключается прямо к ним. Цепи SWDIO/SWCLK на плате отсутствуют.
+
+ЗАМЕЧАНИЯ ПРИ ИЗВЛЕЧЕНИИ
+ - Участок с цветом цепи «PA9» без метки на листе mcu (A2.RXD, R22.2) — отдельная цепь PA9_A2
+ - Участок с цветом цепи «PA10» без метки на листе mcu (A2.TXD, R23.2) — отдельная цепь PA10_A2
+ - Участок с цветом цепи «PA4» без метки на листе sensors (X4.1:Сигн., RT1.1, R8.2, R9.1) — отдельная цепь PA4_X4
+ - Участок с цветом цепи «PA5» без метки на листе sensors (X5.1:Сигн., RT2.1, R11.2, R12.1) — отдельная цепь PA5_X5
+ - Участок с цветом цепи «PA7» без метки на листе sensors (B3.1.Сигн., X6.1:Сигн., R15.1) — отдельная цепь PA7_X6
+ - Участок с цветом цепи «PB5» без метки на листе sensors (B1.3:Вых., X7.2:Вых., R16.2, R17.1) — отдельная цепь PB5_X7
+ - Участок с цветом цепи «PB13» без метки на листе sensors (X8.1:Вход, S1.1, R18.2, R19.1) — отдельная цепь PB13_X8
+ - Участок с цветом цепи «PB12» без метки на листе sensors (X9.1:Вход, S2.1, R20.2, R21.1) — отдельная цепь PB12_X9
+ - Участок с цветом цепи «IAC_OUT» без метки на листе iac (U3.3:OUT1, X15.1:A1, M2.1.1) — отдельная цепь IAC_A1
+ - Участок с цветом цепи «IAC_OUT» без метки на листе iac (U3.8:OUT2, X15.2:A2, M2.1.2) — отдельная цепь IAC_A2
+ - Участок с цветом цепи «IAC_OUT» без метки на листе iac (U3.13:OUT3, X15.3:B1, M2.2.1) — отдельная цепь IAC_B1
+ - Участок с цветом цепи «IAC_OUT» без метки на листе iac (U3.18:OUT4, X15.4:B2, M2.2.2) — отдельная цепь IAC_B2
+
+ПРОВЕРКА
+ Замечаний нет: каждый вывод каждого элемента на плате имеет цепь или явно свободен; цепей с одним выводом нет; все элементы SCHEME_PARTS найдены.
